@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lato', sans-serif;
+}
+.center{
+    max-width: 1100px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+.clear{
+    clear: both;
+}
+header{
+    background-color: #3b5998;
+    padding: 18px 0;
+}
+.logo{
+    float: left;
+    color: white;
+    margin-top: 2px;
+    position: absolute;
+}
+.logo h2{
+    font-size: 40px;
+    font-weight: bold;
+
+}
+.form-login{
+    float: right;
+}
+.form-login .form-element{
+    display:inline-block;
+}
+.form-element p{
+    color:white;
+    font-size: 14px;
+    margin-right: 15px;;
+}
+.form-element input[type=email],
+ input[type=password]{
+    margin-top: 4px;
+    border: 0;
+    height: 22px;
+    padding-left: 3px;
+}
+.form-element input[type=submit]{
+    cursor: pointer;
+    border: 0;
+    background: #1969e5; 
+    border: 2px solid #215ab2;
+    color:white;
+    padding: 3px 5px;
+}
+.form-element input[type=submit]:hover{
+    background: #215ab2;
+}
+section.main{
+    background: linear-gradient(white, #D3D8E8);
+    padding: 80px 0;
+}
+.img-pessoas{
+    float: left;
+    width: 60%;    
+}
+.img-pessoas img{
+    max-width: 100%;
+}
+.open-account{
+    width: 40%;
+    float: left;
+}
+.open-account h2{
+    color:black;
+    font-size: 35px;
+}
+.open-account h3{
+    font-size: 21px;
+    color: rgb(30,30,30);
+    margin-top: 8px;
+}
+form .create-account{
+    margin-top: 10px;
+}
+.w50{
+    width: 50%;
+    padding: 0 5px;
+    float: left;
+}
+.w100{
+    width: 100%;
+    padding: 0 5px;
+    float: left;
+}
+
+form.create-account input{
+    width: 100%;
+}
+form.create-account input[type=email],
+form.create-account input[type=text],
+form.create-account input[type=password]{
+    height:40px;
+    margin-top: 8px;
+    padding-left: 10px;
+    border:1px solid #cccccc;
+    font-size: 20px;
+    border-radius: 8px;
+    outline:none;
+}
+.img-pessoas h2{
+    color: #0e385f;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    margin-top: 40px;
+    width:450px;
+    word-spacing: -1px;
+}
+form.create-account input[type=submit]{
+    height: 40px;
+    background:rgb(105,167,78);
+    color:white;
+    cursor: pointer;
+    border: 0;
+    max-width: 200px;
+    font-size:19px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background: linear-gradient(#67ae55, #578843);
+    background-color: #69a74e;
+    box-shadow: inset 0 1px 1px #a4e388;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+}
+form.create-account input[type=submit]:hover{
+    background: #67ae55;
+}
+form .w100 h2{
+    margin-top: 10px;
+    color: #1d2129;
+    font-size: 22px;
+    font-weight: normal;
+}
+form select.nascimento{
+    float: left;
+    margin-top: 5px;
+    padding: 5px 5px;
+}
+.input-radio{
+    margin: 8px 0;
+    float: left;
+    margin-top: 10px;
+    margin-right: 8px;   
+}
+.input-radio h2{
+    display:inline-block;
+}
+.input-radio input[type=radio]{
+    width: auto !important;
+    display: inline-block;
+}
+select.nasimento{
+    height: 22px;
+}
+section.linguas{
+    padding: 30px 0;
+    background: white;
+
+}
+section.linguas > .center{
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+section.linguas a{
+    padding-right: 15px;;
+    font-size:12px;
+    color: #365899;
+    text-decoration: none;
+}
+section.linguas a.select-lingua{
+    color:#737373;
+}
+.copy{
+    font-size: 12px;   
+    color:#cccccc;
+    margin-top: 15px;
+}
+.termos p{
+      
+    font-size: 13px;
+    color: #777;
+    text-align: left;
+    margin-top: 10px;
+    margin-left:5px;
+    
+}
+.termos a{
+    color:#365899;
+} 
+
+@media screen and (max-width: 768px){
+    .logo{
+        width: 100%;
+        text-align:center;
+        float: none;
+    }
+    form.form-login{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+}
+

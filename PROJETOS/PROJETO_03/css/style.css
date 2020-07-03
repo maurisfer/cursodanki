@@ -1,0 +1,568 @@
+*{ /*Reinicia s parãmetros do navegador*/
+    margin: 0;/*Permite dimensionamento de margem de acordo com a necessidade*/
+    padding: 0;/*Permite dimensionamento do preenchimento de acordo com a necessidade*/
+    box-sizing: border-box; /*Define como padrão encapsulmento de acordo com as caixas*/
+    font-family: "Open Sans", sans-serif; /*Define fonte genérica para o ducmento, permitindo mudanças ao longo do coumento*/
+}
+html, body{
+    height: 100%;/*Define altura automática através da viewport para todo documentos*/    
+}
+/*DIVS GERAIS*/
+.container{
+    max-width: 1280px; /*Tamanho máximo herdado pelo documento*/
+    margin: 0 auto; /*Centralização dos elementos em geral*/
+}
+.clear{
+    clear: both; /*Usado para limpar flutuações fora das media querys em desktop*/
+}
+/*******************************************************************************************/
+
+/*SESSÃO HEADER - BG E LOGO*/
+header{
+    width: 100%; /*Define que a largura ocupe todo o viewport*/    
+    height: 90vh; /*Define que a altura é 90% da tela*/
+    min-height: 800px; /*Define a altura mínima que pode ser alcançada*/
+    padding: 40px 2%; /*Define um padding em toda a sessão de 40px cima/baixo e 2% laterais*/
+    /*max-height: 700px; Limita o height em 800px quando a vh fa tela for maior que 90*/    
+    background-size:cover; /*Define que a imagem cubra todo o bg*/
+    background-position: center; /*Centraliza imagem*/
+    background-image: url(../images/capa.png); /*Define a imagem do bg*/
+    font-weight: 300;
+  
+
+}
+header nav {
+    float: right; /*Flutua todo o menu a esquerda*/
+}
+
+header .logo{
+    float: left; /*Flutua a logo na esquerda sem alterar as propriedades do header nav*/
+    width: 160px; /*Define a largura do item*/
+    height: 40px; /*Define o height do item*/
+    background-color: transparent; /*Define a cor de fundo (bom para debug)*/
+    background-image: url(../images/logo-danki.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -4px;
+    
+}
+/*******************************************************************************************/
+
+/*HEADER MENUS*/
+
+.mobile-menu{    
+    display: none; /*Esconde o menu mobile até width = 768px*/
+    width: 32px; /*Define a largura fixa do objeto*/
+    height: 32px; /*Define a altura fixa do objeto*/
+    background-image: url(../images/menu.png); /*Icone do canto superior (mobile)*/
+    background-size: 100% 100%; /*Deixa a imagem com o memso aspecto ratio dentro da div*/
+    cursor: pointer;
+}
+/*
+.mobile-menu:hover ul{
+    opacity: 1; /*Quando passar o mouse é mostrado na tela. Pode ser usado também o display
+}*/
+.mobile-menu ul{
+    display: none; /*Oculta o menu até que seja clicado*/
+    /*transition: 1s; Define oo tempo de transição de estado*/
+    background-color: white; /*Define a cor do bg da lista*/
+    position: absolute; /*Manipula o item de forma absoluta*/
+    width: 100%; /*Largura total da viwport*/
+    left: 0; /*Não gera espaços a esquerda*/
+    top: 80px; /*Afasta o elemento do topo da página*/
+    list-style-type: none; /*retira estilização padrão da lista*/
+    text-align: center; /*Centraliza todo texto*/
+}
+
+.mobile-menu ul li{
+    padding: 8px 0; /*Espaçamento interno de 8px cima baixa e 0 nas laterais*/
+    transition: 0.4s; /*Tempo de transição do efeito*/
+    border-bottom: 1px solid black; /*Define a borda*/
+}
+.mobile-menu ul li:hover{
+    background-color: rgb(230,230,230); /*Muda a cor da li quando do mouse em cima*/
+}
+.mobile-menu ul li a{
+    color: black; /*Cor da fonte do link*/
+    text-decoration: none; /*Retira estilização do link*/
+}
+
+.desktop-menu ul{
+    list-style-type: none; /*retira as bolinhas da lista*/
+}
+.desktop-menu li{
+    float: left; /*Flutua as linhas a esquerda, deixando-as na mesma linha. pode usar display: inline-block*/
+    padding: 0 20px; /*Aplica um espaçamento interno em todo o elemtno de 0 a esquerda e 20 a direita*/
+    }
+.desktop-menu li a{
+    text-decoration: none; /*Retira o sublnado do link*/
+    color: white; /*Define a cor da fonte*/
+}
+/********************************************************************************************/
+
+/*HEADER CHAMADA*/
+.chamada1{
+    max-width: 600px; /*Limpa a delimitação máxima*/
+    float: right; /*Flutua item a direita*/
+    margin: 200px 150px; /*Margem cim baixo de 200px esq dir 150px*/
+
+}
+.chamada1 h2{
+    font-weight: 300;/*Define o tamanho da fonte*/
+    font-size: 40px; /*Define o tamanho da letra em h2*/
+    color: white; /*Define a cor da fonte*/
+
+}
+.chamada1 p{
+    font-size: 15px; /*Define o tamanho da fonte*/
+    color: white; /*Define a cor da fonte*/
+    margin-top: 10px; /*Afatsa pelo top o p do h2*/
+}
+/*******************************************************************************************/
+
+/*PARÂMETROS SESSÃO 1*/
+.sessao1{
+    width: 100%; /*Define a largura no total da página*/
+    background-color: #472562; /*Define a cor do bg*/
+    padding: 0 2%; /*Define espaçamento interno de 0 px cima baixo e 2% nas laterais*/
+    height: 400px; /*Fixa a altura do elelmento*/
+}
+.sessao1 .container{
+    max-width: 1000px;
+    height: calc(100 + 30px) !important;
+}
+.texto-sessao1{
+    float:left; /*Flutua todo elemento a esquerda*/
+    width: 50%; /*Separada a sessão em dois lados de 50%*/
+    position: relative; /*Permite manipular o texto fora do fluxo da div pai*/
+    left: 55px; /*Espaçamento a esquerda da posição relativa em 55px*/
+    margin-top: 60px; /*Afasta pelo top em 60px do container*/
+    padding-left: 80px; /*Espaço interno a esquerda do contetxo*/
+    color: white; /*Define a cor da fonte*/
+}
+.texto-sessao1 h2{
+    font-size: 26px; /*Tamnaho da fonte*/
+    font-weight: 300; /*Define o "calibre" da letra*/
+}
+.texto-sessao1 p{
+    margin-top: 20px; /*Diatancia pelo topo do h2*/
+    font-size: 15px; /*Define tamanho de fonte*/   
+
+}
+.texto-sessao1 ul{
+    font-size: 15px; /*Define o tamanho da fonte*/
+    list-style-position:outside; /*Alinha a lista para dentro do elemento*/
+    padding-left: 15px; /*Espaço interno a esquerda de 15px*/
+}
+.texto-sessao1 ul li{
+    width: 100%; /*Lagura será de 100% do elemento pai*/
+    margin-top: 8px; /*Distancia pelo topo das linhas*/
+
+}
+.btn1-texto{
+    background-color:#ff703d; /*Define a cor de fondo do botão*/
+    width: 165px; /*define a largura*/
+    height: 44px; /*Define a altura*/
+    font-size:13px; /*Define o tamanho da letra*/    
+    color: white; /*Define a cor da fonte*/
+    cursor: pointer; /*Define a mãozinha do cursor*/
+    margin-top: 30px; /*Separa pelo top da lista*/
+    text-align: center; /*Alinha o texto no centro*/
+    line-height: 44px; /*Define a altura interna da linha de texto*/
+    border-radius: 30px; /*Define a borda  arredondada do botão*/
+}
+.device-sessao1{
+    float: left; /*Flutua-o a esqeurda dos 50% da tela reseravdo para ele pra colidir com o texto*/
+    width: 50%; /*Define que dentro da sessão ocupda metade da vuiwport*/
+    position: relative; /*Permite manipulação do contexto fora do fluxo pai*/
+    top: -34px; /*Afasta pelo topo a posição relativa em 30px*/
+    height: calc(100% + 30px); /*Define o tamanho da imagem do left 50%* compensando o top de -30px*/
+    background-image: url(../images/device.png); /*Caminho da imagem*/
+    background-repeat: no-repeat; /*Evita a repetição do background*/
+    background-size: 80% 100%; /*Define a largura em 100% dsa sessão e altura auotmática*/
+}
+/*******************************************************************************************/
+
+/* PARÂMETROS SESSÃO 2*/
+.sessao2{
+    /*padding-top: 40px; /*Espaço interno pelo topo sepra da sessao 1*/
+    padding-left: 2%; /*Mantem a distância de 2% da lateral*/
+    padding-right: 2%;/*Mantem a distância de 2% da lateral*/
+    background-color: white; /*Cor do bf*/
+    text-align: center; /*Alinha os textos a esquerda*/ 
+}
+.sessao2 .container{
+    max-width: 1000px; /*Delimita o máximo do conteiner da sessão 2*/
+    
+}
+.sessao2 h2{
+    color: #472663; /*Cor das letras do h2*/
+    font-weight: 300; /*Calibre da fonte*/
+}
+.sessao2 p{
+    margin-top: 30px; /*Separa pelo topo do h2*/
+    max-width:900px; /*Delimita a larguma máxima d objeto*/
+    display: inline-block; /*Permite centralização do texto no responsivo*/
+    color: #472663; /*Cor do parágrafo*/
+}
+.sessao2 img{
+    position: relative; /*Manipula a imagem pela sua posição relativa*/
+    top: 70px; /*Afasta pelo topo */
+    width: 100%;/*Largura total do elelemto pai*/
+    margin-top: 10px; /*Margem superior*/
+}
+/*******************************************************************************************/
+
+/* PARÂMETROS SESSÃO 3*/
+
+.sessao3{
+    width: 100%; /*Define a larura como 100% da viewport*/    
+}
+.parte1{
+    float:left; /*Flutua todo elelemento a esquerda da divisão*/
+    width:50%; /*Divide a larura da tela*/
+    padding: 140px 0 90px 0; /* Espaco interno de cima 140px e baixo 90px*/
+    background-color: #835fa7; /*Define a cor do bg*/
+    color: white; /*Define a cor da letra*/
+}
+.parte1 h2{
+    font-weight: 300; /*Calibre da letra*/
+    font-style: italic; /*Estilo da letra*/
+    font-size: 23px; /*Tamanho da letra*/
+}
+.parte1 p{
+    font-size: 15px; /*Tamanho da letra*/
+    margin-top: 10px; /*Afasta do topo */
+    line-height: 35px; /*Define a altura da linha*/
+}
+.wrapper-parte1{
+    max-width: 600px; /*Define a máxima largura da div wrapper*/
+    float: right; /*Flutua a div a direita para colá-la a divisão*/
+    padding: 0 30px; /*cria um espaçamento a direita do item*/
+}
+.parte2{
+    float:left; /**Flutua todo ellemento a esquerda*/
+    width: 50%; /*Define a largura como metade da tela*/
+    padding: 140px 0 90px 0;/* Espaco interno de cima 140px e baixo 90px*/
+}
+.scrollEquipe{
+    max-width: 600px;
+    padding-left: 20px;
+    overflow: hidden;
+}
+.scrollWrapper{
+    width: 100%; /*Precisa completar todo o espaço para gerar diferença*/
+}
+.sobre-autor{
+    float: left; /*Flutua a esquerda */
+    width: 100%;
+    padding: 0 20px;
+}
+.wrapper-titulo-autor{
+
+    float: left;
+}
+.titulo-autor{
+    width: 100%; /*Ocupa a largura do elelmento pai .sobre-autor*/
+    float: left;
+}
+.titulo-autor h2{
+    color: #232323;
+    font-weight: 400;
+    font-size: 21px;
+    padding-right: 20px;
+}
+.titulo-autor p{
+    color: #232323;
+    font-style: italic;
+    font-family: 13px;
+    font-weight: 300;
+}
+.titulo-autor .img-autor{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: gray;
+    background-image: url(../images/actor1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.texto-autor{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+.texto-autor p{
+    color: #232323;
+    font-size: 15px;
+}
+.slider-bullets{
+    width: 100%;
+    float: left;
+    padding-left: 40px;
+    margin-top: 12px;
+}
+.slider-bullets span {
+    float: left;
+    margin-right: 8px;;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgb(200,200,200);
+    cursor: pointer;
+}
+/*******************************************************************************************/
+
+/*PARÂMETROS SESSÃO 4*/
+
+.sessao4{
+    background-color: #472563;
+    padding: 100px 0;    
+}
+.form {
+    float: left;
+    width: 50%;
+    color: white;
+    padding-left: 10px;
+
+}
+.form h2{
+    font-size: 23px;
+    font-family: 300;
+}
+.form p{    
+    font-size: 15px;
+    font-weight: 300;
+    max-width: 480px;
+    padding-right: 10px;
+}
+.form form{
+    margin-top: 15px;
+}
+.form form input[type=text]{
+    width: 90%;
+    max-width: 480px;
+    height: 58px;
+    margin-top: 8px;
+    padding-left: 8px;
+    line-height: 58px;
+    border: 1px solid rgb(200,200,200);
+
+}
+.form form textarea{
+    width: 90%;
+    max-width: 480px;
+    padding: 15px;
+    border: 1px solid rgb(200,200,200);
+    height: 160px;
+    margin-top: 8px;
+}
+.form form input[type=submit]{
+    border: none;
+    background-color:#ff703d; /*Define a cor de fondo do botão*/
+    width: 165px; /*define a largura*/
+    height: 44px; /*Define a altura*/
+    font-size:13px; /*Define o tamanho da letra*/    
+    color: white; /*Define a cor da fonte*/
+    cursor: pointer; /*Define a mãozinha do cursor*/
+    margin-top: 15px; /*Separa pelo top da lista*/
+    border-radius: 30px; /*Define a borda  arredondada do botão*/
+}
+.map-wrapper{
+    float: left;
+    width: 50%;
+    color: white;
+    padding: 0 10px;
+}
+.map-wrapper h2{
+    font-size: 23px;
+    font-weight: 300;
+}
+.map-wrapper3{
+    margin-top: 10px;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+}
+.map-wrapper2{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    padding-top: 100%;
+    background-color: white;    
+}
+.map{
+    left:0;
+    top: 0;   
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgb(200,200,200);
+}
+/******************************************************************************************/
+
+/* PARÃMETROS FOOTER*/
+
+footer{
+    padding: 40px 2%;
+    background-color: #192123;
+    color: white;
+    font-size: 14px;
+}
+footer p:nth-of-type(1){
+    float:left;
+}
+footer p:nth-of-type(2){
+    float: right;
+}
+
+/*******************************************************************************************/
+
+/*MEDIA QUERYS*/
+
+@media screen and (max-width: 830px){   
+    .chamada1{
+        max-width: none; /*Limpa a delimitação máxima*/
+        width: 100%; /*Mantem a largura de total do documento*/
+        text-align: center; /*Alinha os elemtnos no centro*/
+        float: none; /*Flutua o elemento a direita*/
+        margin: 170px 0;/*Ajuda a centralizar o elelemto conforme desejado na imagem de fundo*/
+    }
+    .chamada1 h2{
+        font-weight: 300;/*Define o tamanho da fonte*/
+        font-size: 40px; /*Define o tamanho da letra em h2*/
+        padding: 0 0px; /*Limpa os espaçamentos internos*/
+        color: white; /*Define a cor da fonte*/
+    
+    }
+    .chamada1 p{
+        font-size: 15px; /*Define o tamanho da fonte*/
+        color: white; /*Define a cor da fonte*/
+        margin-top: 10px; /*Afatsa pelo top o p do h2*/
+    }
+    .sessao2{
+        padding-top: 40px; /*Separa pelo topo a sessão 1 do device */
+    }
+
+}
+@media screen and (max-width: 768px){
+    header{
+        width: 100%; /*Define que a largura ocupe todo o viewport*/
+        height: auto; /*Define que a altura é 90% da tela*/
+        min-height: 90vh; /*Não deixa o texto quebrar mesmo na menor tela*/
+        padding: 40px 2%; /*Define um padding em toda a sessão de 40px cima/baixo e 2% laterais*/
+    }
+    .desktop-menu{
+        display: none; /*Oculta o menu para desktop em tela para mobile*/
+    }
+    .mobile-menu{
+        display: block !important ; /*Exibe o menu mobile, não funciona sem o !important*/
+    }
+    .sessao1{
+        padding: 40px 2%; /*Define espaçamento interno de 0 px cima baixo e 2% nas laterais*/
+        height: auto; /*Altura automática de acordo com a tela*/
+        text-align: center; /*Centraliza toda a sessão*/
+    }
+    .sessao1 .container{
+        height: auto;
+    }
+    .texto-sessao1{
+        width: 100%; /*Ocupa toda a largura da tela*/
+        margin-top:0; /*Limpa margens superiores*/
+        padding-left: 0; /*Limpa espaçamento a esquerda*/
+        position: static; /*Centraliza no contexto mudando a posição absolute*/
+        float:none; /*Limpá flutuação*/       
+        display: inline-block; /*Permite quebra de linha e centralização*/
+    }
+    .texto-sessao1 ul{
+        display: inline-block; /*Permite centralização e quebra de linha*/
+        margin-top: 20px; /*Afasta pelo topo em 20px*/
+    }
+    .texto-sessao1 ul li{
+        float: none; /*Limpa flutuações*/
+        text-align: left; /*Alinha o texto a esquerda*/
+    }
+    .btn1-texto{
+        display: inline-block; /*Permite centralização e quebra de linha*/
+    }
+    .device-sessao1{
+        display: none;/*Esconde imagem do device em mobile*/
+    }
+    .sessao2{
+        padding-top: 40px;/*Separa pelo topo a sessão 1 do device */
+    }
+    .sessao4 .container{
+        text-align: center;
+    }
+ 
+    .form{
+        float: none !important;
+        width: 100%;
+    }
+    .form p{
+        display: inline-block;
+    }
+    .map-wrapper{        
+        float:none !important;
+        width: 100%;
+        padding: 0 4%;
+        margin-top: 40px;
+    }
+    .map-wrapper3{
+        display: inline-block;
+        margin-top: 10px;
+        width: 80%;
+        padding-top: 80%;
+        max-width: none;
+        position: relative;
+
+    }
+    .map-wrapper2{
+        position: absolute;
+        left:0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        padding-top: 0%;
+        background-color: white;    
+    }
+
+}
+@media screen and (max-width: 580px){
+    .parte1{
+        width: 100%;
+        padding: 40px 0;
+    }
+    .parte2{
+        width: 100%;
+        padding: 40px 0;
+    }
+    .sessao2 img{
+        top: 16px; /*Afasta pelo topo */
+        margin-top: 20px; /*Margem superior*/
+    }
+    
+    footer{
+        padding: 40px 2%;
+        background-color: #192123;
+        color: white;
+        font-size: 14px;
+        text-align:center;
+    }
+    footer p:nth-of-type(1){
+        float:none;
+    
+    }
+    footer p:nth-of-type(2){
+        float: none;
+        margin-top: 8px;
+    }
+
+    
+}
+

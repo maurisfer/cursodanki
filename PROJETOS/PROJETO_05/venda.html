@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="description" content ="">
+    <meta name = "keywords" content ="">
+    <meta name = "author" content = "">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href ="css/style.css" rel ="stylesheet" type ="text/css">
+    <link rel ="icon" type ="image/ico" href ="images/logo.ico">        
+    <title>Projeto 05</title>
+</head>
+<body>
+    <header style = "border-bottom: 3px solid #EB2d2d;">
+        <div class = "container">
+            <div class = "logo">
+                <img src ="images/logo.jpg">
+            </div><!--IMAGEM LOGO-->
+            <nav class = "desktop">
+                <ul>
+                    <li><a  href = "index.html">Home</a></li>
+                    <li><a style = "color: #EB2d2d;" href = "venda.html">Vendas</a></li>
+                    <li><a href = "sobre.html">Sobre</a></li>
+                    <li><a href = "">Contato</a></li><!--Será linkado pelo JS-->
+                </ul>
+            </nav><!-- MENU DESKTOP-->
+            <nav class = "mobile">
+                <ul>
+                    <li><a href = "index.html">Home</a></li>
+                    <li><a style = "color: #EB2d2d;" href = "venda.html">Vendas</a></li>
+                    <li><a href = "sobre.html">Sobre</a></li>
+                    <li><a href = "">Contato</a></li><!--Será linkado pelo JS-->
+                </ul>
+            </nav><!-- MENU MOBILE-->
+            <div class = "clear"></div> <!--CLEAR FLOAT DESKTOP-->
+        </div> <!--CONTAINER HEADER-->
+    </header>
+
+    <section class = 'venda'>
+        <div class = "line-titulo">
+            <div class ='ln1'></div>
+            <h2>Veículos para Venda</h2>
+        </div> <!--TITULO-->
+        <div class ='container'>
+            <div class = 'content-venda'>
+                <div class ='sidebar'>
+                    <div class ='search1'>
+                        <h2>Filtre por preço</h2>
+                        <div class ='barra-preco'>
+                            <div class ='barra-preco-fill'></div>
+                            <div class ='pointer-barra'></div>
+                        </div><!--BARRA PREÇO-->
+                        <div class ='valor-pesquisa'>
+                            <p class = 'preco_pesquisa'>R$0,00</p>
+                            <p>R$70.000,00</p>
+                        </div><!--VALOR PESQUISA-->
+                        <div class = "clear"></div>
+                    </div><!--SEARCH1-->
+
+                    <div class ='search2'>
+                        <h2>Filtre por ano</h2> 
+                        <form>
+                            <div class ='form-venda-wrapper'>
+                                <input type ='checkbox' id ="item1"/>
+                                <label for="item1">
+                                    <div class ='circle'></div>
+                                </label>
+                                <span>Todas as decádas</span>
+                            </div><!--FORM VENDA WRAPPER-->
+
+                            <div class ='form-venda-wrapper'>
+                                <input type ='checkbox' id ="item2"/>
+                                <label for="item2">
+                                    <div class ='circle'></div>
+                                </label>
+                                <span>1960- 1970s</span>
+                            </div><!--FORM VENDA WRAPPER-->
+
+                            <div class ='form-venda-wrapper'>
+                                <input type ='checkbox' id ="item3"/>
+                                <label for="item3">
+                                    <div class ='circle'></div>
+                                </label>
+                                <span>1971 - 1990s</span>
+                            </div><!--FORM VENDA WRAPPER-->
+
+                            <div class ='form-venda-wrapper'>
+                                <input type ='checkbox' id ="item4"/>
+                                <label for="item4">
+                                    <div class ='circle'></div>
+                                </label>
+                                <span>1990 - 2000s</span>
+                            </div><!--FORM VENDA WRAPPER-->
+
+                        </form><!--FORM SEARCH 2-->
+                    </div><!--SEARCH2-->
+                </div><!--SIDEBAR-->
+                <div class = "vitrine-venda">
+                    <div class = "container">
+                        <div class ='vitrine-destaque'>
+                            <div style = "background-image: url('images/carro1.jpg')" class ='carro-img'></div><!--IMAGEM CARRO-->
+                            <div class ='info-carro'>
+                                <h2> Volkswagemn Karmann-ghia</h2>
+                                <p>1.6 8v, Gasolina, 2P, Manual 1969</p>
+                                <a class = 'btn1' href ="">Mais detalhes</a>
+                            </div> <!--INFO_CARRO-->
+                        </div><!--VITRINE DESTAQUE-->
+                        <div class ='vitrine-destaque'>
+                            <div style = "background-image: url('images/carro1.jpg')" class ='carro-img'></div><!--IMAGEM CARRO-->
+                            <div class ='info-carro'>
+                                <h2> Volkswagemn Karmann-ghia</h2>
+                                <p>1.6 8v, Gasolina, 2P, Manual 1969</p>
+                                <a class = 'btn1' href ="">Mais detalhes</a>
+                            </div> <!--INFO_CARRO-->
+                        </div><!--VITRINE DESTAQUE--> 
+                        <div class ='vitrine-destaque'>
+                            <div style = "background-image: url('images/carro1.jpg')" class ='carro-img'></div><!--IMAGEM CARRO-->
+                            <div class ='info-carro'>
+                                <h2> Volkswagemn Karmann-ghia</h2>
+                                <p>1.6 8v, Gasolina, 2P, Manual 1969</p>
+                                <a class = 'btn1' href ="">Mais detalhes</a>
+                            </div> <!--INFO_CARRO-->
+                        </div><!--VITRINE DESTAQUE-->
+                        <div class ='vitrine-destaque'>
+                            <div style = "background-image: url('images/carro1.jpg')" class ='carro-img'></div><!--IMAGEM CARRO-->
+                            <div class ='info-carro'>
+                                <h2> Volkswagemn Karmann-ghia</h2>
+                                <p>1.6 8v, Gasolina, 2P, Manual 1969</p>
+                                <a class = 'btn1' href ="">Mais detalhes</a>
+                            </div> <!--INFO_CARRO-->
+                        </div><!--VITRINE DESTAQUE-->
+                        <div class ='vitrine-destaque'>
+                            <div style = "background-image: url('images/carro1.jpg')" class ='carro-img'></div><!--IMAGEM CARRO-->
+                            <div class ='info-carro'>
+                                <h2> Volkswagemn Karmann-ghia</h2>
+                                <p>1.6 8v, Gasolina, 2P, Manual 1969</p>
+                                <a class = 'btn1' href ="">Mais detalhes</a>
+                            </div> <!--INFO_CARRO-->
+                        </div><!--VITRINE DESTAQUE--> 
+                        <div class ='vitrine-destaque'>
+                            <div style = "background-image: url('images/carro1.jpg')" class ='carro-img'></div><!--IMAGEM CARRO-->
+                            <div class ='info-carro'>
+                                <h2> Volkswagemn Karmann-ghia</h2>
+                                <p>1.6 8v, Gasolina, 2P, Manual 1969</p>
+                                <a class = 'btn1' href ="">Mais detalhes</a>
+                            </div> <!--INFO_CARRO-->
+                        </div><!--VITRINE DESTAQUE-->                        
+                    </div><!--CONTAINER VITRINE-->
+                </div><!--VITRINE VENDA-->
+                <div class ='clear'></div>  
+            </div><!--CONTENT VENDA-->
+        </div><!--CONTAINER-->
+    </section> <!--SECTION VENDA-->
+    
+    <footer>
+        <div class = "container">
+            <nav>
+                <ul>
+                    <li><a  href = "index.html">Home</a></li>
+                    <li><a style = "color: #EB2d2d;" href = "venda.html">Vendas</a></li>
+                    <li><a href = "">Sobre</a></li>
+                    <li><a href = "">Contato</a></li>
+                </ul>
+            </nav>
+            <p>Todos os direitos reservados</p>
+            <div class ='clear'></div>
+        </div>
+    </footer>
+
+    <script src ='js/jquery.js'></script>
+    <script src ='js/functions.js'></script>
+
+
+</body>
+</html>

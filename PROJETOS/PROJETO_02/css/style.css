@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html, body{
+    height: 100%;
+}
+/*PARÂMETROS GERAIS APLICADOS AO HTML*/
+.container{
+    width: 100%;/*Define a largura no total da tela*/
+    max-width: 1280px;/*Define que o máximo da largura da tela é de 1200px*/
+    margin: 0 auto; /*Centraliza os elementos na página em todos os que tenha um container*/
+    /*A altura sempre será definida pela altura dos elementos no interior*/
+}
+.clear{
+    clear: both;
+}
+/************************************************************************************************************/
+
+/* PARÂMETROS HEADER*/
+header{
+    padding: 10px 2% 40px 2%; /*distância intena cima > esquerda > baixo > direita*/
+    background-color:rgb(220,220,220) /*Define a cor de fundo do header*/
+    /*Padding total de 50 px gera um espaço preenchido que será depois influenciado pelo padding e height dos elementos no interior*/
+}
+.logo-1{
+    float: left; /*Define que a imagem vai ficar a esquerda do container*/
+    width: 160px;/*Define a largurada imagem*/
+    height: 60px; /*Define a altura da imagem*/
+    /*background-color: purple;*/
+    background-image: url(../images/logo1.png);/*Define caminho da imagem*/
+    background-size: 100% auto;/*Define o preenchimento do background*/
+    background-repeat: no-repeat;/*Define a não repetição do bg*/
+    background-position: center;/*Define o bg como centralizado*/    
+}
+.logo-2{
+    float: right; /*Define que a imagem vai ficar a direita do container*/
+    width: 160px;/*Define a largurada imagem*/
+    height: 60px; /*Define a altura da imagem*/
+    /*background-color: purple;*/
+    background-image: url(../images/logo2.png);/*Define caminho da imagem*/
+    background-size: 100% auto;/*Define o preenchimento do background*/
+    background-repeat: no-repeat;/*Define a não repetição do bg*/
+    background-position: center;/*Define o bg como centralizado*/    
+}
+/************************************************************************************************************/
+
+/*PARÂMETROS DA SECTION COVER-FORM -  BG e FORM*/
+section.cover-form{
+    width: 100%; /*Define a largura da sessão*/  
+}
+.bg{
+    position: relative; /*Define a posição relativa para o bg*/
+    height: 560px; /*Define o tamanho total da imagem do bg*/
+    background-position: center;/*Centraliza o bg dentro da seção*/
+    background-size: cover; /*Irá cobrir todo o espaçamento do bg*/
+    background-image: url(../images/bg-form.jpg);/*Define a imagem de fundo da seção*/
+}
+
+.form-container{
+    position: absolute; /*Permite a manipulação do objeto fora do fluxo do bg sem usar o float*/
+    right: 30px; /* Define o recuo à direita do bg e retira o padrão de iniciar a esquerda no position do bg*/
+    top: -2.5%; /*Recua em 2,5% o top das bordas em relação ao bg fixo sem alterar o resto do bg.*/      
+    width: 400px; /*Define a largura total do form container*/
+    height: 105%; /*Define a altura como 105% do elemento .bg*/    
+    box-shadow: 1px 1px 2px 1px rgb(190,190,190); /*Define uma sombra (vert, horiz, blur e spread)*/ 
+    background-color:white; /*Define a cor de fundo do formulário*/
+    
+}
+.form-container h2{
+    font-weight: normal; /*Por padrão h2 é bold, converte para normal*/
+    padding: 25px 15px; /*Espaçamento interno cima/baixo 25px dir/esq 15px*/
+    color: black; /*Define cor para a fonte*/
+    font-size: 18px; /*Define o tamanho da fonte*/
+    background-color: rgb(210,210,210) /*Define cor de fundo do h2*/
+}
+.form-container form{
+    margin-top: 20px; /*Afasta a parte de cima da borda do h2*/
+    padding: 15px; /*Define um espaçamento interno de mais 15px além do margin-top para afastar o form do h2*/
+}
+.form-container form p{
+    font-size: 14px; /*Define o tamanho dafonte do p do form que fica em cima do input*/
+    color: #525252; /*Define a cor do p*/
+}
+.form-container form input[type='text']{
+    width: 100%; /*Ocupa a largura do form-container*/
+    border: 1px solid #ccc; /*Define a borda*/
+    height: 45px; /*Define a altura do elemento*/
+    line-height: 45px; /*Seta o tamanho entre as linhas*/
+    padding-left: 10px; /*Define o tamanho do padding dentro do input - afasta da margem esquerda o placeholder*/
+    /*Não foi usado padding total por incompatibilidade com alguns navegadores, e assim achei mais simples de entender o distanciamento.*/
+}
+.form-container form input[type='submit']{
+    background-color: #033C50; /*Define a cor do botão*/
+    text-transform: uppercase; /*Transoforma as letras minúsculas em maiusculas*/
+    color: white; /*Define a cor da fonta*/
+    width: 100%; /*Define a largura com 100% do conteiner, fica do mesmo tamanho que os inputs*/
+    font-size: 25px; /*Tamanho da letra do botão*/
+    height: 50px; /*Altura do botão*/
+    cursor: pointer; /*Curso de mãozinha para indicar botão*/
+    border:0; /*Retira a borda padrão do input*/ 
+}
+.form-wrapper:not(:first-child){ /*Não aplica a propriedade ao primeiro input*/
+    margin-top: 40px; /*Define a mergin entre os inputs do form*/
+}
+.form-wrapper:last-child{
+    margin-top: 20px; /*Altera as condições acima do ultimo elemento do form*/
+}
+/************************************************************************************************************/
+
+/*SEÇÃO CHAMADA*/
+
+section.chamada{
+    position: relative;
+    z-index: 1; /*Joga o elemento para trás do form*/
+    width: 100%; /*Define a largura do elemento conforme o tamanho da viewport*/       
+    /* position: relative; Retira o elemento do fluxo estático e cola ele na bora de cima*/
+    /* top: -50px; /*Reduz a distancia entre chamada e o elemento anterior dimunuindo o excesso causado pelo height de 110% do form*/
+    text-align: center; /*Centraliza o elemento*/
+    /*display: inline-block; Define o inline-block paraa que tanto o chamada quanto o h2 fiquem na mesma linha e assim possa centralizar*/ 
+}
+.chamada .icone-seta{
+    position: absolute; /*Position absoluta para poder manipular fora do contexto do section.chamada*/
+    left: 50%; /*Afasta da bora 50%*/
+    top: -32px; /*Recua para cima 32px*/
+    transform: translateX(-50%); /*Ajusta para que o ponto de partida da imagem seja o centro*/
+    -ms-transform: translateX(-50%);
+    width: 64px; /*Largura ocupado pela imagem*/
+    height: 64px; /*Altura ocupada pela imagem*/
+    background-size: 100% 100%; /*Deixa a imagem com o aspecto ratio igual*/
+    background-image: url(../images/arrow.png); /*Imagem do background*/
+}
+section.chamada div.container{
+    background-color: #29526d;
+    padding: 50px 0 50px 0;
+}
+
+section.chamada h2{
+    width: 98%; /*Delimita o espaço das tags quando a págnia estiver responsiva para mostrar também o bg*/ 
+    max-width: 700px; /*Delimita o h2 em 500% quando o width for maior do que o desejado*/
+    display: inline-block;/*Define o inline-block paraa que tanto o chamada quanto o h2 fiquem na mesma linha e assim possa centralizar*/  
+    color:white;/* cor da fonte*/
+    font-size: 24px; /*Tamanho da fonte*/
+    text-transform: uppercase;
+    font-weight: normal; /*retirar o padão*/
+    font-weight: normal;
+}
+section.chamada p{
+    width: 98%; /*Delimita o espaço das tags quando a págnia estiver responsiva para mostrar também o bg*/ 
+    max-width: 700px; /*Delimita o h2 em 500% quando o width for maior do que o desejado*/
+    display: inline-block;/*Define o inline-block paraa que tanto o chamada quanto o h2 fiquem na mesma linha e assim possa centralizar*/  
+    color:white;/* cor da fonte*/
+    margin-top: 10px;
+    font-size: 18px; /*Tamanho da fonte*/
+    font-weight: normal; /*retirar o padão*/
+    
+}
+/************************************************************************************************************/
+
+/*SEÇÃO MOSAICO*/
+.flex-mosaico{
+    display: flex;/*Dinamiza a tela e permite criar blocos com width and height automáticos*/
+    /*Poderia ser usado reverse-row para mudar a ordem, mas foi usado in-line o order: 1; e order: 2; para inversão imagem a imagem do mosaico.*/
+}
+.item-1-mosaico{
+    background-position: center; /*Centraliza a imagem*/
+    background-size: cover; /*Estende-a para cobrir toda a largura do objeto*/
+    width: 60%; /*Define o espaço que ocupa dentro do display flex*/
+    /*Background-image definida inline devido as imagens serem diferentes, mas poderiam ser colocadas aqui com as pseudo-classe :first-child, :nth-child(2), :nth-child(3) e :last-child, deixando as configrações aqui de forma genérica para todos os item-1-mosaico (imagem) */ 
+       
+}
+.item-2-mosaico{
+    background-color: #4683ab; /*Define a cor do bg*/
+    padding: 40px; /*Gera o espaçamento interno do p*/
+    width: 40%; /*Define o espaço que ocupa dentro do display flex*/
+}
+.item-2-mosaico p{
+    color: white;/*Boa prática, definir a cor de texto em uma linha para texto*/
+}
+/************************************************************************************************************/
+
+/*RODAPÉ*/
+footer{
+    text-align: center;
+    padding: 20px 0;
+}
+footer img {
+    width: 120px;
+}
+footer p{
+    margin-top: 8px;
+}
+/************************************************************************************************************/
+
+/*SESSÃO DEDICADA AS MEDIA QUERYS*/
+
+@media screen and (max-width: 768px){
+    .flex-mosaico{
+        display: block; /*Deixa os elelemntos em bloco na ordem colocada no flex*/
+    }
+    .item-1-mosaico{
+        padding-top: 80%; /*Aumenta a visibilidade da imagem quando do responsivo*/
+        height: 400px; /*Tamanho manuel do responsivo para que aparecça a imagem*/
+        width: 100%; /*Vai ocupar toda a largura da viewport*/
+    }
+    .item-2-mosaico{
+        text-align: justify;
+        width: 100%;/*Vai ocupar toda a largura da viewport*/
+    }  
+}
+@media screen and (max-width: 960px){
+    .bg{
+        text-align: center; /*Alinha os elementos no centro*/
+        padding: 40px 0 60px; /*Altera o espaçamento interno durante o responsivo*/
+        height: auto; /*Gera a altura conforme a página*/
+    }
+    .form-container{
+        height: auto;/*Gera a altura conforme a página*/
+        width: 96%; /*Ajusta o tamanho do form conforme o responsivo*/
+        max-width: 400px; /* Tamanho máximo que o form irá atingir*/
+        position: static; /*Altera o absolute para static permitindo centralizar o formulário*/
+        display: inline-block; /*Auxilia na quebra do texto para que centralize*/
+    }
+}
+@media screen and (max-width: 510px){
+    header{
+        text-align: center; /*Alinha os elelementos no centro*/
+    }
+    /*[class^="logo"]{
+        margin-top: 10px;
+        display: inline-block;
+        float: one; (Realiza omesm efeito, só que diz ^="logo" o que começa com logo
+        
+        */
+    .logo-1, .logo-2{
+        margin-top: 10px; /*Separa as duas imagens em 10px*/
+        display: inline-block; /*Faz as duas ficarem na mesma linha*/
+        float: none; /*Retira a flutuação*/
+    }/*Define que quando a width da vw for 510, ambas as logos centralizem.*/
+}
+
+/************************************************************************************************************/
